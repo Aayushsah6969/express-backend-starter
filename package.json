@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A production-ready CLI tool to scaffold Express.js/Node.js backend projects",
   "license": "MIT",
-  "author": "",
+  "author": "Aayush Sah",
   "type": "module",
   "main": "index.js",
   "bin": {
@@ -28,5 +28,13 @@
     "fs-extra": "^11.3.3",
     "inquirer": "^8.2.6",
     "ora": "^9.1.0"
-  }
+  },
+  "files": [
+  "bin",
+  "src"
+],
+"engines": {
+  "node": ">=18"
+}
+
 }
