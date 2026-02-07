@@ -1,6 +1,6 @@
 {
   "name": "express-backend-starter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A production-ready CLI tool to scaffold Express.js/Node.js backend projects",
   "license": "MIT",
   "author": "Aayush Sah",
@@ -37,7 +37,6 @@
     "node": ">=18"
   },
   "publishConfig": {
-  "access": "public"
-}
-
+    "access": "public"
+  }
 }
