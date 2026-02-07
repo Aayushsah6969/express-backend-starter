@@ -137,7 +137,15 @@ async function initializePrisma(projectPath, database) {
       stdio: 'pipe'
     });
     
-    prismaSpinner.succeed(chalk.green('Prisma initialized'));
+    prismaSpinner.text = 'Prisma initialized, generating client...';
+    
+    // Generate Prisma Client
+    await execa('npx', ['prisma', 'generate'], {
+      cwd: projectPath,
+      stdio: 'pipe'
+    });
+    
+    prismaSpinner.succeed(chalk.green('Prisma initialized and client generated'));
   } catch (error) {
     prismaSpinner.fail(chalk.red('Failed to initialize Prisma'));
     throw error;

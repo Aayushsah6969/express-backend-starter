@@ -81,7 +81,17 @@ program
       console.log(chalk.green.bold('\n✅ Project created successfully!\n'));
       console.log(chalk.cyan('Next steps:'));
       console.log(chalk.white(`  cd ${answers.projectName}`));
-      console.log(chalk.white('  npm run dev\n'));
+      
+      // Special instructions for Prisma databases
+      if (answers.database === 'postgresql' || answers.database === 'mysql') {
+        console.log(chalk.yellow('\n  📝 Configure your database:'));
+        console.log(chalk.white('  1. Update DATABASE_URL in .env file'));
+        console.log(chalk.white('  2. Run: npx prisma migrate dev'));
+        console.log(chalk.white('  3. Then: npm run dev\n'));
+      } else {
+        console.log(chalk.white('  npm run dev\n'));
+      }
+      
       console.log(chalk.gray('Happy coding! 🎉\n'));
 
     } catch (error) {

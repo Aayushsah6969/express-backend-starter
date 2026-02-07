@@ -33,7 +33,7 @@ export async function getUserInput() {
     {
       type: 'list',
       name: 'database',
-      message: 'Which database do you want to use? (Use arrow keys)',
+      message: 'Which database do you want to use?',
       choices: [
         { name: '📦 MongoDB', value: 'mongodb' },
         { name: '🐘 PostgreSQL', value: 'postgresql' },
